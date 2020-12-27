@@ -154,3 +154,55 @@ input:focus:-ms-input-placeholder
     color: #000000;
 }
 
+.info
+{
+	margin-left:auto;
+	margin-right:auro;
+	text-align: center;
+	padding:25px;
+	color: white;
+}
+
+/*main menu*/
+#navigation
+{
+	background-color:#000000;
+	text-align: center;
+	margin-left:24%;
+	margin-right:24%;
+	
+}
+
+.menu
+{
+	list-style-type:none;
+	margin:0px;
+	padding:10px;
+	font-size:18px;
+	min-height:38px;
+	line-height:200%;	
+}
+
+.menu > li
+{
+	display: inline-block;
+	padding-left:20px;
+	padding-right:20px;
+	border-right:1px dashed #ffffff;
+}
+.menu > li:first-child
+{
+	border-left:1px dashed #ffffff;
+}
+
+.menu a
+{
+	color:white;
+	text-decoration:none;
+}
+
+.menu a:hover
+{
+	color:#8f423c;
+}
+
