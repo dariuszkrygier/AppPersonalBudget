@@ -255,3 +255,36 @@ input:focus:-ms-input-placeholder
   visibility: visible;
 }
 
+/* logout */
+
+#container
+{
+	padding:0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+
+.tile
+{
+	display: inline-block;
+	margin-top:40px;
+	background-color: #000000;
+	
+}
+
+.tile:hover
+{
+	opacity: 0.5;
+}
+a.tilelink
+{
+	
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	width: 230px;
+	height: 142px;
+}
+
