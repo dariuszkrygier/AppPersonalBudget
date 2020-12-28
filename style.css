@@ -219,3 +219,39 @@ input:focus:-ms-input-placeholder
 	margin-right: auto;
 }
 
+.homePage
+{
+	text-decoration:none;
+	color: white;
+}
+
+.homePage a
+{
+	text-decoration:none;
+	color: white;
+}
+
+.homePage a:hover
+{	
+	color: #8f423c;
+}
+
+.homePage .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.homePage:hover .tooltiptext {
+  visibility: visible;
+}
+
