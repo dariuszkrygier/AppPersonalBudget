@@ -10,11 +10,32 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Datepicker - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+		$("#datepicker").datepicker().datepicker("setDate", new Date());
+		
+	 } );
+	 </script>
+	
+	
+	
 	<link rel="stylesheet" href="style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	
+	<script src="budget.js"></script>
+	
+
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -59,19 +80,61 @@
 		
 			<form action="order.php" method="post">
 			
-			<div class="row">
 			
-				<label>Kwota w PLN: <input type="number" name="kwota" step="any"></label>
+			<div class="addForm">
+			
+			
+				<label>Ammount in PLN: <input type="number" name="kwota" step="0.01"></label>
 			
 			</div>
 			
+			<div class="addForm">
 			
-			<div class="row">
-				
-					<label>Data: <input type="date" name = "dzien" value="2019-02-06"></label>
-				
+				<label>Date: <input type="text" id="datepicker" ></label>
+			
 			</div>
 			
+			<div class = "addForm">
+				<fieldset>
+				<legend>Category: </legend>
+				
+				 <div><label><input type="radio" value ="1" name="category" checked>Salary</label></div>
+				 
+				 <div><label><input type="radio" value ="2" name="category">Bank interest</label></div>
+				 
+				 <div><label><input type="radio" value ="3" name="category">Allegro sale</label></div>
+				 
+				 <div><label><input type="radio" value ="4" name="category">Other</label></div>
+				 
+				 <div><label for="comment">Comment (optionally)<label></div>
+					
+					<textarea name="comment" id="comment" rows="4" cols="40" ></textarea>
+				
+				</div>
+
+				</fieldset>
+			</div>
+			
+			<div id="container">
+			
+				<div class="addForm">
+				
+				<input type="submit" value="Add">
+					
+				</div>
+				
+				
+				<div class="addForm">
+					<input type="reset" value="Cancel" onclick="return confirm_reset();">
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				
+				
+			</div>
+				
+		
 			</form>
 		
 		</article>
