@@ -16,6 +16,33 @@
 	
 	<link rel="stylesheet" href="css/fontello.css" type="text/css">
 	
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Datepicker - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
+		$("#datepicker").datepicker().datepicker("setDate", new Date());
+		
+	 } );
+	 </script>
+	
+	
+	
+	<link rel="stylesheet" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	
+	<script src="budget.js"></script>
+	
+	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -57,7 +84,108 @@
 		
 		<article>
 		
+			<form action="order.php" method="post">
 			
+			
+			<div class="addForm">
+			
+			
+				<label>Ammount in PLN: <input type="number" name="kwota" step="0.01"></label>
+			
+			</div>
+			
+			<div class="addForm">
+			
+				<label>Date: <input type="text" id="datepicker" ></label>
+			
+			</div>
+			
+			<div class = "addForm">
+				<fieldset>
+				<legend>Payment type: </legend>
+				
+				 <div><label><input type="radio" value ="1" name="payment type" checked>Cash</label></div>
+				 
+				 <div><label><input type="radio" value ="2" name="payment type">Debit card</label></div>
+				 
+				 <div><label><input type="radio" value ="3" name="payment type">Credit card</label></div>
+
+				
+			</div>
+
+				</fieldset>
+			</div>
+			
+			<div class = "addForm">
+				<fieldset>
+				<legend>Expense category: </legend>
+				
+				 <div><label><input type="radio" value ="1" name="expenseCategory" checked>Food</label></div>
+				 
+				 <div><label><input type="radio" value ="2" name="expenseCategory">Home</label></div>
+				 
+				 <div><label><input type="radio" value ="3" name="expenseCategory">Car</label></div>
+				 
+				 <div><label><input type="radio" value ="4" name="expenseCategory">Phone</label></div>
+				 
+				 <div><label><input type="radio" value ="5" name="expenseCategory">Healthcare</label></div>
+				 
+				 <div><label><input type="radio" value ="6" name="expenseCategory">Clothes</label></div>
+				 
+				 <div><label><input type="radio" value ="7" name="expenseCategory">Hygiene</label></div>
+				 
+				 <div><label><input type="radio" value ="8" name="expenseCategory">Children</label></div>
+				 
+				 <div><label><input type="radio" value ="9" name="expenseCategory">Entertainment</label></div>
+				 
+				 <div><label><input type="radio" value ="10" name="expenseCategory">Trip</label></div>
+				 
+				 <div><label><input type="radio" value ="11" name="expenseCategory">Entertainment</label></div>
+				 
+				 <div><label><input type="radio" value ="12" name="expenseCategory">Training course</label></div>
+				 
+				 <div><label><input type="radio" value ="13" name="expenseCategory">Books</label></div>
+				 
+				 <div><label><input type="radio" value ="14" name="expenseCategory">Savings</label></div>
+				 
+				 <div><label><input type="radio" value ="15" name="expenseCategory">Pension</label></div>
+				 
+				 <div><label><input type="radio" value ="16" name="expenseCategory">Debts payment</label></div>
+				 
+				 <div><label><input type="radio" value ="17" name="expenseCategory">Donation</label></div>
+				 
+				 <div><label><input type="radio" value ="17" name="expenseCategory">Other</label></div>
+				 
+				 <div><label for="comment">Comment (optionally)<label></div>
+					
+					<textarea name="commentExpense" id="commentExpense" rows="4" cols="40" maxlength="30"></textarea>
+				
+				</div>
+
+				</fieldset>
+			</div>
+			
+			<div id="container2">
+			
+				<div class="tile2">
+				
+				<input type="submit" value="Add">
+					
+				</div>
+				
+				
+				<div class="tile2">
+					<input type="reset" value="Cancel" onclick="return confirm_reset();">
+				</div>
+				
+				<div style="clear:both;"></div>
+				
+				
+				
+			</div>
+				
+		
+			</form>
 		
 		</article>
 		
