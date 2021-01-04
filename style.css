@@ -3,6 +3,7 @@ body
 	/* Background pattern from Toptal Subtle Patterns */
 	background-image: url("img/random_grey_variations.png");
 	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -188,8 +189,8 @@ input:focus:-ms-input-placeholder
 {
 	background-color:#000000;
 	text-align: center;
-	margin-left:24%;
-	margin-right:24%;
+	margin-left:21%;
+	margin-right:21%;
 	
 }
 
