@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Logowanie</title>
-	<meta name="description" content="Utwórz nowe konto">
+	<meta name="description" content="Zaloguj się">
 	<meta name="keywords" content="personalny, budżet, bilans, przychody, wydatki, saldo">
 	<meta name="author" content="Dariusz Krygier">
 	
@@ -13,6 +13,11 @@
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	 <link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://kit.fontawesome.com/9855606672.js" crossorigin="anonymous"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	
@@ -27,8 +32,19 @@
 	
 
 		<header>
-		
-			<h1 class="text-uppercase text-dark naglowek ml-0">Logowanie</h1>
+		<span class = "logo text-uppercase">
+			
+					<i class="fa fa-coins "></i> Budżet personalny
+					
+		</span>
+	
+			<h1 class="text-uppercase text-dark naglowek ml-0"> 
+	
+			
+					Logowanie
+				
+			
+			</h1>
 
 		</header>
 		
@@ -44,17 +60,26 @@
 				<form action="mainMenu.html" method="post">
 					
 					
-						<div class="col-xs-6 offset-xs-3">
 					
-							  <input type="text" name="name" placeholder="Imię lub mail" onfocus="this.placeholder=''" onblur="this.placeholder='Imię lub mail'">
+					<div class="col-xs-6 offset-xs-3">	
+						<div class="inputWithIcon">						
+						
+							<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"> </i>
+						  <input class="inputfield" type="text" name="name" placeholder="Imię lub email" onfocus="this.placeholder=''" onblur="this.placeholder='Imię lub mail'">
 							
 						</div>
+						
+					</div>
+					
+					<div class="inputWithIcon">
 						
 						<div class="col-xs-6 offset-xs-3">
-						
-							<label>  <input type="password" name="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'"></label>
+							<i class="fa fa-key fa-lg fa-fw"aria-hidden="true"> </i>
+							  <input type="password" name="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'">
 							
 						</div>
+						
+					</div>
 						
 						<div class="col-xs-6 offset-xs-3">
 						
@@ -76,6 +101,8 @@
 							
 						</div>
 						
+					
+					
 				</form>	
 					
 			</div>
