@@ -33,7 +33,7 @@ h2
 	margin-right: auto;
 	margin-top: 10px;	
 	align-items: center;
-  justify-content: center;
+	justify-content: center;
 }
 
 
@@ -206,91 +206,15 @@ input:focus:-ms-input-placeholder
 }
 
 /*main menu*/
-#navigation
-{
-	background-color:#000000;
-	text-align: center;
-	margin-left:21%;
-	margin-right:21%;
-	
-}
-
-.menu
-{
-	list-style-type:none;
-	margin:0px;
-	padding:10px;
-	font-size:18px;
-	min-height:38px;
-	line-height:200%;	
-}
-
-.menu > li
-{
-	display: inline-block;
-	padding-left:20px;
-	padding-right:20px;
-	border-right:1px dashed #ffffff;
-}
-.menu > li:first-child
-{
-	border-left:1px dashed #ffffff;
-}
-
-.menu a
-{
-	color:white;
-	text-decoration:none;
-}
-
-.menu a:hover
-{
-	color:#8f423c;
-}
-
 
 .image
 {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top:20px;
 }
 
-.homePage
-{
-	text-decoration:none;
-	color: white;
-}
-
-.homePage a
-{
-	text-decoration:none;
-	color: white;
-}
-
-.homePage a:hover
-{	
-	color: #8f423c;
-}
-
-.homePage .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.homePage:hover .tooltiptext {
-  visibility: visible;
-}
 
 /* logout */
 
@@ -485,13 +409,15 @@ textarea { resize: none; }
 
 .tilelink 
 {
-	color:black;
+	font-family: 'Open Sans', sans-serif;
 }
 .tile
 {
+	padding-top:15px;
 	text-align:center;
 	font-size:16px;
 	background-color:#9ACD32;
+	font-family: 'Open Sans', sans-serif;
 }
 .tile:hover
 {
@@ -506,6 +432,7 @@ a.tilelink
 	color: black;
 	text-decoration: none;
 	text-align:center;
+	font-size:16px;
 		
 }
 
@@ -533,6 +460,11 @@ a.tilelink:hover
 		text-decoration: none;
 		display:inline;
 		
+	}
+	
+	.list-group
+	{
+		text-align:center;
 	}
 	
 	
@@ -565,6 +497,11 @@ a.tilelink:hover
 	color:white;
 	font-size:10px;
 	
+}
+
+.bg-menu
+{
+	background-color: #8f423c;
 }
 
 
