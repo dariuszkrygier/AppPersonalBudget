@@ -11,7 +11,6 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
-	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	
 	<link rel="stylesheet" href="style.css">
@@ -29,7 +28,7 @@
 	
 </head>
 
-<body class="d-flex flex-column min-vh-10>
+<body class="d-flex flex-column min-vh-10">
 
 	<header>
 	
@@ -100,48 +99,82 @@
 					<form action="order.php" method="post">	
 						
 						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon">	
+							<div class="inputWithIcon my-2">	
 							  <i class="fas fa-money-bill-wave fa-lg fa-fw ml-1" aria-hidden="true"> </i>							
-							  <input type="text" name="name" placeholder="Podaj kwotę" onfocus="this.placeholder=''" onblur="this.placeholder='Podaj kwotę'">
+							  <input type="number" name="kwota" step="0.01" placeholder="Podaj kwotę" onfocus="this.placeholder=''" onblur="this.placeholder='Podaj kwotę'">
 							</div>
 						</div>
 						
 						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon">	
+							<div class="inputWithIcon my-2">	
 								<i class="fas fa-calendar-week fa-lg fa-fw"aria-hidden="true"> </i>
-								<input type="password" name="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'">
+								<input type="date" name="date" id="today" >
+								<script type="text/javascript" src="budget.js"></script>
+								
 							</div>
 						</div>
 							
 						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon">	
-								<i class="fa fa-key fa-lg fa-fw"aria-hidden="true"> </i>
-								<input type="password" name="passwordConfirm" placeholder="Powtórz hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Powtórz hasło'">
-							</div>
-						</div>
-							
-						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon">	
-								<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"> </i>
-								<input type="email" name="email" placeholder="Email"  onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
-							</div>
-						</div>
-							
-						<div class="col-xs-6 offset-xs-3">
-								<input type="submit" value="Utwórz konto!">
-						</div>
+							<div class="inputWithIcon2 my-4">	
+								
+								<fieldset>
+									<legend> <i class="fas fa-tasks fa-lg fa-fw"aria-hidden="true"> </i>  Kategoria: </legend>
+									
+									 <div><label><input type="radio" value ="1" name="category" checked> Wynagrodzenie</label></div>
+									 
+									 <div><label><input type="radio" value ="2" name="category"> Odsetki bankowe</label></div>
+									 
+									 <div><label><input type="radio" value ="3" name="category"> Sprzedaż na allegro</label></div>
+									 
+									 <div><label><input type="radio" value ="4" name="category"> Inne</label></div>
+									 
+									 <div><label for="comment">Komentarz (opcjonalnie):</label></div>
+										
+										<textarea name="comment" id="comment" rows="4" cols="24" maxlength="40"></textarea>
 
-						<div class="col-xs-6 offset-xs-3">
-								<a href = "login.html" class = "registerLink">
+								</fieldset>
 								
-									<div class ="loginToRegister">
-								
-										Masz już konto? Zaloguj się!
-								
-									</div>
-								
-								</a>
+							</div>
 						</div>
+							
+						
+				<div class="row" id="logowanie">			
+						<div>
+								<input type="submit" class="btn btn-info btn-outline-light" value="Dodaj">
+								
+								<input type="reset" class="btn btn-info btn-outline-dark" value="Anuluj"  data-toggle="modal" data-target="#myModal">
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="myModal">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Anuluj dodawanie przychodu</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										Wprowadzone dane zostaną utracone.<br>
+										Czy jesteś pewien, że chcesz anulować?
+									  </div>
+
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+									  
+										<button type="button" class="btn btn-info btn-outline-dark" value="Usuń dane" data-dismiss="modal">Usuń dane</button>
+										<button type="button" class="btn btn-info " value="zostawDane" >Zostaw dane</button>
+										
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+						</div>
+				
+				</div>
 					
 					</form>	
 
@@ -149,63 +182,6 @@
 				
 			</div>
 		
-		
-			<form action="order.php" method="post">
-				
-			
-			<div class="addForm">
-			
-			
-				<label>Ammount in PLN: <input type="number" name="kwota" step="0.01"></label>
-			
-			</div>
-			
-			<div class="addForm">
-			
-				<label>Date: <input type="text" id="datepicker" ></label>
-			
-			</div>
-			
-			<div class = "addForm">
-				<fieldset>
-				<legend>Category: </legend>
-				
-				 <div><label><input type="radio" value ="1" name="category" checked>Salary</label></div>
-				 
-				 <div><label><input type="radio" value ="2" name="category">Bank interest</label></div>
-				 
-				 <div><label><input type="radio" value ="3" name="category">Allegro sale</label></div>
-				 
-				 <div><label><input type="radio" value ="4" name="category">Other</label></div>
-				 
-				 <div><label for="comment">Comment (optionally)</label></div>
-					
-					<textarea name="comment" id="comment" rows="4" cols="40" maxlength="30"></textarea>
-
-				</fieldset>
-			</div>
-			
-			<div id="container2">
-			
-				<div class="tile2">
-				
-				<input type="submit" value="Add">
-					
-				</div>
-				
-				
-				<div class="tile2">
-					<input type="reset" value="Cancel" onclick="return confirm_reset();">
-				</div>
-				
-				<div style="clear:both;"></div>
-				
-				
-				
-			</div>
-				
-		
-			</form>
 		
 		</article>
 		
@@ -216,7 +192,7 @@
 		
 		<div class="info">
 		
-		All rights reserved &copy; 2020 Save money, don't take credits!
+		Wszelkie prawa zastrzeżone &copy; 2021 Oszczędzaj pieniądze, nie bierz kredytów!
 		
 		</div>
 	
@@ -227,6 +203,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="budget.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,1 @@
-function confirm_reset() {
-    return confirm("Are you sure you want to cancel?");
-}
+document.querySelector("#today").valueAsDate = new Date();
