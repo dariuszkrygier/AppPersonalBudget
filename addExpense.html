@@ -3,43 +3,21 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Personal Budget Add Expense</title>
+	<title>Dodaj wydatek</title>
 	<meta name="description" content="Add Expense">
 	<meta name="keywords" content="personalny, budżet, bilans, przychody, wydatki, saldo">
 	<meta name="author" content="Dariusz Krygier">
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
-	<link rel="stylesheet" href="style.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	
-	<link rel="stylesheet" href="css/fontello.css" type="text/css">
-	
-	
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script>
-	$( function() {
-		$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
-		$("#datepicker").datepicker().datepicker("setDate", new Date());
-		
-	 } );
-	 </script>
-	
-	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	
 	<link rel="stylesheet" href="style.css">
+	
+	 <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	
-	<link rel="stylesheet" href="css/fontello.css" type="text/css">
-	
-	<script src="budget.js"></script>
+	<script src="https://kit.fontawesome.com/9855606672.js" crossorigin="anonymous"></script>
 	
 	
 	<!--[if lt IE 9]>
@@ -48,156 +26,239 @@
 	
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-10">
 
 	<header>
 	
-		<h1>Add Expense</h1>
-		
-		<div class="homePage">
-		
-			<a href="mainMenu.html">
-		
-				<i class="icon-home-outline"></i>
-				<span class="tooltiptext">Main Page</span>
 			
-			</a>
+	
+		<span class = "logo text-uppercase">
 			
-		</div>
+					<i class="fa fa-coins "></i> Budżet personalny
+					
+		</span>
+	
+			<h1 class="text-uppercase text-dark naglowek ml-0"> Dodaj wydatek </h1>
+			
+		<nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-center text-light py-1">
+			 
+		
+					
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse justify-content-center " id="mainmenu">
+			
+				<ul class="navbar-nav">
+				
+					<li class="nav-item px-3">
+						<a class="nav-link" href="mainMenu.html"><i class="fas fa-home"></i> Start </a>
+					</li>
+					
+					<li class="nav-item px-3 ">
+						<a class="nav-link " href="addIncome.html"><i class="fas fa-hand-holding-usd"></i> Przychody </a>
+					</li>
+					
+					<li class="nav-item px-3 active">
+						<a class="nav-link" href="addExpense.html"><i class="fas fa-shopping-cart"></i> Wydatki </a>
+					</li>
+					
+					<li class="nav-item px-3">
+						<a class="nav-link" href="showBallance.html"><i class="fas fa-balance-scale-right"></i> Bilans </a>
+					</li>
+					
+					<li class="nav-item px-3">
+						<a class="nav-link" href="settings.html"><i class="fas fa-cogs"></i> Ustawienia </a>
+					</li>
+					
+					<li class="nav-item px-3">
+						<a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"></i> Wyloguj </a>
+					</li>
+				
+				</ul>
+			
+			</div>
+		
+		</nav>	
+		
 
 	</header>
 	
 	<main>
 	
-		<nav id="navigation">
 		
-			<ul class="menu">
-				<li><a href="addIncome.html">Add income</a></li>
-				<li><a href="addExpense.html">Add expense</a></li>
-				<li><a href="showBalance.html">Show balance</a></li>
-				<li><a href="settings.html">Settings</a></li>
-				<li><a href="logout.html">Log out</a></li>
-			</ul>
-		
-		</nav>
 		
 		<article>
 		
-			<form action="order.php" method="post">
-			
-			
-			<div class="addForm">
-			
-			
-				<label>Ammount in PLN: <input type="number" name="kwota" step="0.01"></label>
-			
-			</div>
-			
-			<div class="addForm">
-			
-				<label>Date: <input type="text" id="datepicker" ></label>
-			
-			</div>
-			
-			<div class = "addForm">
-				<fieldset>
-				<legend>Payment type: </legend>
+				<div class="container">
 				
-				 <div><label><input type="radio" value ="1" name="payment type" checked>Cash</label></div>
-				 
-				 <div><label><input type="radio" value ="2" name="payment type">Debit card</label></div>
-				 
-				 <div><label><input type="radio" value ="3" name="payment type">Credit card</label></div>
-
-
-				</fieldset>
-			</div>
-			
-			<div class = "addForm">
-				<fieldset>
-				<legend>Expense category: </legend>
-				
-				 <div><label><input type="radio" value ="1" name="expenseCategory" checked>Food</label></div>
-				 
-				 <div><label><input type="radio" value ="2" name="expenseCategory">Home</label></div>
-				 
-				 <div><label><input type="radio" value ="3" name="expenseCategory">Car</label></div>
-				 
-				 <div><label><input type="radio" value ="4" name="expenseCategory">Phone</label></div>
-				 
-				 <div><label><input type="radio" value ="5" name="expenseCategory">Healthcare</label></div>
-				 
-				 <div><label><input type="radio" value ="6" name="expenseCategory">Clothes</label></div>
-				 
-				 <div><label><input type="radio" value ="7" name="expenseCategory">Hygiene</label></div>
-				 
-				 <div><label><input type="radio" value ="8" name="expenseCategory">Children</label></div>
-				 
-				 <div><label><input type="radio" value ="9" name="expenseCategory">Entertainment</label></div>
-				 
-				 <div><label><input type="radio" value ="10" name="expenseCategory">Trip</label></div>
-				 
-				 <div><label><input type="radio" value ="11" name="expenseCategory">Entertainment</label></div>
-				 
-				 <div><label><input type="radio" value ="12" name="expenseCategory">Training course</label></div>
-				 
-				 <div><label><input type="radio" value ="13" name="expenseCategory">Books</label></div>
-				 
-				 <div><label><input type="radio" value ="14" name="expenseCategory">Savings</label></div>
-				 
-				 <div><label><input type="radio" value ="15" name="expenseCategory">Pension</label></div>
-				 
-				 <div><label><input type="radio" value ="16" name="expenseCategory">Debts payment</label></div>
-				 
-				 <div><label><input type="radio" value ="17" name="expenseCategory">Donation</label></div>
-				 
-				 <div><label><input type="radio" value ="17" name="expenseCategory">Other</label></div>
-				 
-				 <div><label for="commentExpense">Comment (optionally)</label></div>
-					
-					<textarea name="commentExpense" id="commentExpense" rows="4" cols="40" maxlength="30"></textarea>
-				
-				
-
-				</fieldset>
-			</div>
-			
-			<div id="container2">
-			
-				<div class="tile2">
-				
-				<input type="submit" value="Add">
-					
-				</div>
-				
-				
-				<div class="tile2">
-					<input type="reset" value="Cancel" onclick="return confirm_reset();">
-				</div>
-				
-				<div style="clear:both;"></div>
-				
-				
-				
-			</div>
-				
+				<div class="row" id="logowanie">
 		
-			</form>
+					<form action="order.php" method="post">	
+						
+						<div class="col-xs-6 offset-xs-3">
+							<div class="inputWithIcon my-2">	
+							  <i class="fas fa-money-bill-wave fa-lg fa-fw ml-1" aria-hidden="true"> </i>							
+							  <input type="number" name="kwota" step="0.01" placeholder="Podaj kwotę" onfocus="this.placeholder=''" onblur="this.placeholder='Podaj kwotę'">
+							</div>
+						</div>
+						
+						<div class="col-xs-6 offset-xs-3">
+							<div class="inputWithIcon my-2">	
+								<i class="fas fa-calendar-week fa-lg fa-fw"aria-hidden="true"> </i>
+								<input type="date" name="date" id="today" >
+								<script type="text/javascript" src="budget.js"></script>
+								
+							</div>
+						</div>
+							
+						<div class="col-xs-6 offset-xs-3">
+							<div class="inputWithIcon2 my-4">	
+								
+								<fieldset>
+									<legend> <i class="fas fa-cash-register fa-lg fa-fw"aria-hidden="true"> </i>  Sposób płatności: </legend>
+									
+									 <div><label><input type="radio" value ="1" name="paycategory" checked> Gotówka</label></div>
+									 
+									 <div><label><input type="radio" value ="2" name="paycategory"> Karta debetowa</label></div>
+									 
+									 <div><label><input type="radio" value ="3" name="paycategory"> Karta kredytowa</label></div>
+									 
+									 <div><label><input type="radio" value ="4" name="paycategory"> Przelew</label></div>
+
+								</fieldset>
+								
+							</div>
+						</div>
+						
+						<div class="col-xs-6 offset-xs-3">
+							<div class="inputWithIcon my-2">	
+							  <i class="fas fa-tasks fa-lg fa-fw" aria-hidden="true"> </i>							
+							  <input type="text" name="kategoria" placeholder="Kategoria" data-toggle="modal" data-target="#GSCCModal">
+
+									<!-- The Modal -->
+								<div class="modal fade" id="GSCCModal">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Wybierz kategorię</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										 <div class="form-group">
+										  <label for="sel1">Kategorie:</label>
+										  <select class="form-control" id="sel1">
+											<option>Jedzenie</option>
+											<option>Mieszkanie</option>
+											<option>Transport</option>
+											<option>Telekomunikacja</option>
+											<option>Opieka zdrowotna</option>
+											<option>Ubranie</option>
+											<option>Higiena</option>
+											<option>Dzieci</option>
+											<option>Rozrywka</option>
+											<option>Wycieczka</option>
+											<option>Szkolenia</option>
+											<option>Książki</option>
+											<option>Oszczędności</option>
+											<option>Na złotą jesień, czyli emeryturę</option>
+											<option>Spłata długów</option>
+											<option>Darowizna</option>
+											<option>Inne wydatki</option>
+										  </select>
+										  <div><label for="comment">Komentarz (opcjonalnie):</label></div>
+										
+										<textarea name="comment" id="comment" rows="4" cols="24" maxlength="40"></textarea>
+										</div> 
+									  </div>
+
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+									  
+										<button type="button" class="btn btn-info btn-outline-dark" value="Usuń dane" data-dismiss="modal">Anuluj</button>
+										<button type="button" class="btn btn-info " value="zostawDane" >Zapisz</button>
+										
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+								
+							</div>
+						</div>
+							
+						
+				<div class="row" id="logowanie">			
+						<div>
+								<input type="submit" class="btn btn-info btn-outline-light" value="Dodaj">
+								
+								<input type="reset" class="btn btn-info btn-outline-dark" value="Anuluj"  data-toggle="modal" data-target="#myModal">
+								
+								<!-- The Modal -->
+								<div class="modal fade" id="myModal">
+								  <div class="modal-dialog">
+									<div class="modal-content">
+
+									  <!-- Modal Header -->
+									  <div class="modal-header">
+										<h4 class="modal-title">Anuluj dodawanie przychodu</h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+									  </div>
+
+									  <!-- Modal body -->
+									  <div class="modal-body">
+										Wprowadzone dane zostaną utracone.<br>
+										Czy jesteś pewien, że chcesz anulować?
+									  </div>
+
+									  <!-- Modal footer -->
+									  <div class="modal-footer">
+									  
+										<button type="button" class="btn btn-info btn-outline-dark" value="Usuń dane" data-dismiss="modal">Usuń dane</button>
+										<button type="button" class="btn btn-info " value="zostawDane" >Zostaw dane</button>
+										
+									  </div>
+
+									</div>
+								  </div>
+								</div>
+						</div>
+				
+				</div>
+					
+					</form>	
+
+				</div>
+				
+			</div>
+		
 		
 		</article>
 		
 	</main>
 	
-	<footer>
+	<footer class="mt-auto">
 	
 		
 		<div class="info">
 		
-		All rights reserved &copy; 2020 Save money, don't take credits!
+		Wszelkie prawa zastrzeżone &copy; 2021 Oszczędzaj pieniądze, nie bierz kredytów!
 		
 		</div>
 	
 	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="budget.js"></script>
 
 </body>
 </html>
