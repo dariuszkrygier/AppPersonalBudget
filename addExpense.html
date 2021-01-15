@@ -91,67 +91,72 @@
 		
 		<article>
 		
-				<div class="container">
+		
+			<div class="container">
 				
 				<div class="row" id="logowanie">
 		
-					<form action="order.php" method="post">	
+					<form action="" class="main-form needs-validation" novalidate style="width:350px; margin-auto">	
+					
 						
-						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon my-2">	
-							  <i class="fas fa-money-bill-wave fa-lg fa-fw ml-1" aria-hidden="true"> </i>							
-							  <input type="number" name="kwota" step="0.01" placeholder="Podaj kwotę" onfocus="this.placeholder=''" onblur="this.placeholder='Podaj kwotę'">
-							</div>
+						
+						<div class="form-group">
+							 <div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fas fa-coins"></i> 
+							    </div>
+								<input type="number" name="kwota" step="0.01" class="form-control" id="wplata"placeholder="Podaj kwotę" onfocus="this.placeholder=''" onblur="this.placeholder='Podaj kwotę'" required>
+								<div class="invalid-feedback">Podaj kwotę!</div>
+							 </div>
+							 
 						</div>
 						
-						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon my-2">	
-								<i class="fas fa-calendar-week fa-lg fa-fw"aria-hidden="true"> </i>
-								<input type="date" name="date" id="today" >
+						
+						<div class="form-group">	
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fas fa-calendar-week"></i> 
+							    </div>
+								<input type="date" name="date" id="today" class="form-control" required>
+								<div class="invalid-feedback">Podaj datę!</div>
 								<script type="text/javascript" src="budget.js"></script>
-								
-							</div>
-						</div>
-							
-						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon2 my-4">	
-								
-								<fieldset>
-									<legend> <i class="fas fa-cash-register fa-lg fa-fw"aria-hidden="true"> </i>  Sposób płatności: </legend>
-									
-									 <div><label><input type="radio" value ="1" name="paycategory" checked> Gotówka</label></div>
-									 
-									 <div><label><input type="radio" value ="2" name="paycategory"> Karta debetowa</label></div>
-									 
-									 <div><label><input type="radio" value ="3" name="paycategory"> Karta kredytowa</label></div>
-									 
-									 <div><label><input type="radio" value ="4" name="paycategory"> Przelew</label></div>
-
-								</fieldset>
-								
 							</div>
 						</div>
 						
-						<div class="col-xs-6 offset-xs-3">
-							<div class="inputWithIcon my-2">	
-							  <i class="fas fa-tasks fa-lg fa-fw" aria-hidden="true"> </i>							
-							  <input type="text" name="kategoria" placeholder="Kategoria" data-toggle="modal" data-target="#GSCCModal">
-
-									<!-- The Modal -->
-								<div class="modal fade" id="GSCCModal">
-								  <div class="modal-dialog">
-									<div class="modal-content">
-
-									  <!-- Modal Header -->
-									  <div class="modal-header">
-										<h4 class="modal-title">Wybierz kategorię</h4>
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-									  </div>
-
-									  <!-- Modal body -->
-									  <div class="modal-body">
-										 <div class="form-group">
-										  <label for="sel1">Kategorie:</label>
+						<div class="form-group incomeCategory">
+						
+							
+							<label ><span><i class="fas fa-cash-register" aria-hidden="true"></i> Metoda płatności:</span></label>
+								
+							<div class="form-check">				
+							  <input class="form-check-input" type="radio" name="paymentCategory" id="paymentCategory" value="option1" checked>
+							  <label class="form-check-label" for="paymentCategory1">
+								Gotówka
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="paymentCategory" id="paymentCategory2" value="option2">
+							  <label class="form-check-label" for="paymentCategory2">
+								Karta debetowa
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="paymentCategory" id="paymentCategory3" value="option3" >
+							  <label class="form-check-label" for="paymentCategory3">
+								Karta kredytowa
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="paymentCategory" id="paymentCategory4" value="option4" >
+							  <label class="form-check-label" for="paymentCategory4">
+								Przelew
+							  </label>
+							</div>
+							
+						</div>
+						
+						 <div class="form-group incomeCategory">
+										  <label for="sel1"><span><i class="fas fa-tasks" aria-hidden="true"></i> Kategoria:</span></label>
 										  <select class="form-control" id="sel1">
 											<option>Jedzenie</option>
 											<option>Mieszkanie</option>
@@ -171,33 +176,20 @@
 											<option>Darowizna</option>
 											<option>Inne wydatki</option>
 										  </select>
-										  <div><label for="comment">Komentarz (opcjonalnie):</label></div>
-										
-										<textarea name="comment" id="comment" rows="4" cols="24" maxlength="40"></textarea>
-										</div> 
-									  </div>
-
-									  <!-- Modal footer -->
-									  <div class="modal-footer">
-									  
-										<button type="button" class="btn btn-info btn-outline-dark" value="Usuń dane" data-dismiss="modal">Anuluj</button>
-										<button type="button" class="btn btn-info " value="zostawDane" >Zapisz</button>
-										
-									  </div>
-
-									</div>
-								  </div>
-								</div>
-								
-							</div>
-						</div>
-							
+										  
+								<div class="form-group my-2">
+									<label for="comment">Komentarz (opcjonalnie):</label>
+									<textarea class="form-control" rows="2"   id="comment"></textarea>
+								</div> 
+						 </div>
 						
-				<div class="row" id="logowanie">			
-						<div>
-								<input type="submit" class="btn btn-info btn-outline-light" value="Dodaj">
+							
+							<div>
+								<input type="submit" class="btn btn-success " value="Dodaj">
 								
-								<input type="reset" class="btn btn-info btn-outline-dark" value="Anuluj"  data-toggle="modal" data-target="#myModal">
+								
+								<input type="reset" class="btn btn-danger" value="Anuluj"  data-toggle="modal" data-target="#myModal">
+								
 								
 								<!-- The Modal -->
 								<div class="modal fade" id="myModal">
@@ -206,36 +198,38 @@
 
 									  <!-- Modal Header -->
 									  <div class="modal-header">
-										<h4 class="modal-title">Anuluj dodawanie przychodu</h4>
+										<h4 class="modal-title">Anuluj dodawanie wydatku</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 									  </div>
 
 									  <!-- Modal body -->
 									  <div class="modal-body">
 										Wprowadzone dane zostaną utracone.<br>
-										Czy jesteś pewien, że chcesz anulować?
+										Czy jesteś pewien, że chcesz je usunąć?
 									  </div>
 
 									  <!-- Modal footer -->
 									  <div class="modal-footer">
 									  
-										<button type="button" class="btn btn-info btn-outline-dark" value="Usuń dane" data-dismiss="modal">Usuń dane</button>
-										<button type="button" class="btn btn-info " value="zostawDane" >Zostaw dane</button>
+										<button type="button" class="resetbtn btn-info btn-outline-danger" value="Usuń dane" data-dismiss="modal">Usuń dane</button>
+										<button type="button" class="cancelbtn btn-info btn-outline-success" value="zostawDane" >Zostaw dane</button>
 										
 									  </div>
 
 									</div>
 								  </div>
 								</div>
-						</div>
-				
-				</div>
+							</div>
+							
+						
 					
 					</form>	
 
 				</div>
 				
 			</div>
+		
+			
 		
 		
 		</article>

@@ -4,7 +4,7 @@ body
 	background-image: url("img/random_grey_variations.png");
 	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
-
+	min-height:100vh;
 }
 
 h1
@@ -58,15 +58,6 @@ h2
 	align-items: center;
 }
 
-.chooseForm
-{
-	padding-left:4px;
-	font-size:21px;
-	font-weight:700;
-	color: #262626;
-	margin-bottom:15px;
-	
-}
 
 .incomeCategory
 {
@@ -84,42 +75,14 @@ h2
 	padding-left:70px;
 }
 
-
-/*
-
-input[type=submit]
-
-{
-	background-color:#9ACD32;
-	font-size: 18px;
-	font-weight: 700;
-	color:#262626;
-	margin-left:20px;
-	margin-right:20px;
-	
+form label span{
+  color: #262626;
+  font-weight:700;
 }
 
-input[type=reset]
-
-{
-	background-color:#8f423c;
-	font-size: 18px;
-	font-weight: 700;
-	color:#ededed;
-	margin-left:20px;
-	margin-right:20px;
-		
-}
-
-input[type=submit] a
-{
-	text-decoration:none;
-}
-
-/*input[type=button]*/
 .loginToRegister
 {
-	width:350px;
+	width:300px;
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#91281f;
@@ -140,41 +103,6 @@ a.registerLink
 	text-decoration: none;
 }
 
-/*
-input[type=submit]:focus,
-input[type=reset]:focus
-{
-	-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,1);
-	box-shadow: 0px 0px 15px 5px rgba(0,0,0,1);
-}
-
-input[type=submit]:hover
-
-{
-	
-	-webkit-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	transform: scale(1.2);
-	color: #8f423c;
-	font-weight: 700;
-	font-size: 20px;
-	background-color:#9ACD32;
-}
-
-input[type=reset]:hover
-{
-	
-	-webkit-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	transform: scale(1.2);
-	color: white;
-	font-weight: 700;
-	font-size: 20px;
-	background-color:#8f423c;
-}
-
-/*input[type=button]:focus*/
 .loginToRegister:focus
 {
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,1);
@@ -197,7 +125,7 @@ input[type=reset]:hover
 .info
 {
 	margin-left:auto;
-	margin-right:auro;
+	margin-right:auto;
 	text-align: center;
 	padding:15px;
 	color: white;
@@ -226,7 +154,10 @@ input[type=reset]:hover
 }
 
 
-
+.container
+{
+	
+}
 
 
 /* add income */
@@ -386,3 +317,20 @@ textarea:focus, input:focus, .uneditable-input:focus {
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6) !important;
     outline: 0 none !important;
 }
+
+footer {
+
+   color: white;
+   text-align: center;
+}
+
+wrapper {
+   min-height:100vh;
+}
+
+.flex-fill {
+   flex:1 1 auto;
+}
+
+
+

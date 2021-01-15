@@ -12,12 +12,13 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/fontello.css" type="text/css">
+	
 	 <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<script src="https://kit.fontawesome.com/9855606672.js" crossorigin="anonymous"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/9855606672.js" crossorigin="anonymous"></script>
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -25,9 +26,10 @@
 	
 </head>
 
+
 <body>
 	
-	
+<wrapper class="d-flex flex-column">
 
 		<header>
 		<span class = "logo text-uppercase">
@@ -46,7 +48,7 @@
 
 		</header>
 		
-<main>
+<main class="flex-fill">
 		
 	<article>
 			
@@ -55,35 +57,31 @@
 				
 			<div class="row" id="logowanie">
 		
-				<form action="mainMenu.html" method="post">
+				<form action="" class="login-form needs-validation" novalidate style="width:350px; margin-auto">	
 					
+					<div class="form-group">
+							 <div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fa fa-user"></i> 
+							    </div>
+								<input type="text" name="name" class="form-control" placeholder="Imię lub email" onfocus="this.placeholder=''" onblur="this.placeholder='Imię lub mail'" required>
+								<div class="invalid-feedback">Podaj imię lub emial!</div>
+							 </div>
+						</div>
 					
-					
-					<div class="col-xs-6 offset-xs-3">	
-						<div class="inputWithIcon">						
-						
-							<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"> </i>
-						  <input class="inputfield" type="text" name="name" placeholder="Imię lub email" onfocus="this.placeholder=''" onblur="this.placeholder='Imię lub mail'">
-							
+						<div class="form-group">
+							 <div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fa fa-key"></i> 
+							    </div>
+								<input type="password" name="password" class="form-control" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'" required>
+								<div class="invalid-feedback">Podaj hasło!</div>
+							 </div>
 						</div>
 						
-					</div>
 					
-					<div class="inputWithIcon">
-						
-						<div class="col-xs-6 offset-xs-3">
-							<i class="fa fa-key fa-lg fa-fw"aria-hidden="true"> </i>
-							  <input type="password" name="password" placeholder="Hasło" onfocus="this.placeholder=''" onblur="this.placeholder='Hasło'">
-							
-						</div>
-						
-					</div>
-						
-						<div class="col-xs-6 offset-xs-3">
-						
-							<input type="submit" value="Zaloguj!"> 
-						 
-						</div>
+						<input type="submit" class="btn btn-success " value="Zaloguj">
+					
 						
 						<div class="col-xs-6 offset-xs-3">
 						
@@ -112,7 +110,9 @@
 	</article>
 			
 </main>
-		
+
+
+	
 		<footer>
 		
 			
@@ -124,7 +124,7 @@
 		
 		</footer>
 	
-	
+</wrapper>	
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	
