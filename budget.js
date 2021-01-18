@@ -10,4 +10,14 @@ document.querySelector("#today").valueAsDate = new Date();
             }
             form.classList.add('was-validated');
         })
+		
+		
+$(document).ready(function(){
+	$('#dropdownMenu2').hide();
+		
+	});
     
+
+
+
+	
