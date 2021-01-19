@@ -108,9 +108,73 @@
 						<button class="dropdown-item" type="button">Bieżący miesiąc</button>
 						<button class="dropdown-item" type="button">Poprzedni miesiąc</button>
 						<button class="dropdown-item" type="button">Bieżący rok</button>
-						<button class="dropdown-item" type="button">Przedział czasowy</button>
+						<button class="dropdown-item" type="button" data-toggle="modal" data-target="#dateRange">Przedział czasowy</button>
 					  </div>
 					</div>
+					
+					
+					
+					<div id="date">
+					
+					<output id="wynik"></output>
+					
+					</div>
+					
+					
+					<!-- Modal -->
+<div class="modal fade" id="dateRange" tabindex="-1" role="dialog" aria-labelledby="dateRange" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wybierz przedział czasowy:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+	  <div class="modal-body">
+        
+		<div class="container">
+				
+				<div class="row" id="logowanie">
+		
+					<form action="" class="main-form" novalidate style="width:350px; margin-auto">	
+									
+						
+						<div class="form-group">	
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fas fa-calendar-week"></i> 
+							    </div>
+								<input type="date" name="date" id="dateFrom" class="form-control" required>
+								<div class="invalid-feedback">Podaj datę!</div>
+								<script type="text/javascript" src="budget.js"></script>
+							</div>
+						</div>
+						
+						<div class="form-group">	
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<i class="fas fa-calendar-week"></i> 
+							    </div>
+								<input type="date" name="date" id="dateTill" class="form-control" required>
+								<div class="invalid-feedback">Podaj datę!</div>
+								<script type="text/javascript" src="budget.js"></script>
+							</div>
+						</div>
+					</form>
+				</div>
+		</div>
+						
+		
+					  </div>
+					  <div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+							<button type="button" class="btn btn-success">Wybierz</button>
+						 </div>
+		</div>
+	</div>
+</div>
 					
 				</div>
 				
