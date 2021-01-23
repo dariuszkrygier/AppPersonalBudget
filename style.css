@@ -36,6 +36,14 @@ h2
 	justify-content: center;
 }
 
+#showBalanceChosenDate
+{
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	justify-content: center;
+}
+
 
 .form-group input
 {
@@ -337,3 +345,17 @@ wrapper {
 	background:#9ACD32;
 }
 
+#tableShowBalance > tbody > tr > td
+{
+	text-align:center;
+}
+
+.pie
+{
+     width: 100%;
+   text-align:center;
+}
+#cvs
+{
+  display: inline;
+}
