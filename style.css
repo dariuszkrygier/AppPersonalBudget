@@ -50,9 +50,22 @@ h2
 	background-color: #858585;
 	color:  #ededed;
 	font-size: 16px;
-	padding:10px;
 	border: 1px solid white;
-	border-radius:0px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	margin-top:20px;
+	
+}
+
+.changeMarginOfInput input
+{
+	background-color: #858585;
+	color:  #ededed;
+	font-size: 16px;
+	border: 1px solid white;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	margin-top:20px;
 	
 }
 
@@ -64,8 +77,18 @@ h2
 	background-color: #858585;
 	border: 1px solid white;
 	align-items: center;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+	margin-top:20px;
 }
 
+
+
+#wplata, #today 
+{
+   border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
 
 .incomeCategory
 {
@@ -74,7 +97,7 @@ h2
 	font-size: 16px;
 	padding:10px;
 	border: 1px solid white;
-	border-radius:0px;
+	border-radius:5px;
 
 }
 
@@ -298,6 +321,7 @@ a.tilelink:hover
             color: #A9A9A9;
  }
  
+ 
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -359,3 +383,44 @@ wrapper {
 {
   display: inline;
 }
+
+
+#toggleChangeName, #toggleNameApplyChanges, #toggleChangeEmail, #toggleEmailApplyChanges, #toggleChangePassword, #toggleNewPassword,#toggleRepeatPassword,#togglePasswordApplyChanges {
+  display: none;
+
+}
+
+
+.settings 
+{
+	margin-left: auto;
+	margin-right: auto;	
+	align-items: center;
+	justify-content: center;
+	margin-top:20px;
+
+}
+
+
+.changebutton
+{
+	width:275px !important;
+	
+}
+
+.buttonsSettings
+{
+	border-radius:5px;
+	
+}
+
+#toggleNewPassword input,#toggleRepeatPassword input
+{
+	margin-top:0px;
+}
+
+#toggleNewPassword > .input-group > .input-group-prepend, #toggleRepeatPassword > .input-group > .input-group-prepend
+{
+	margin-top:0px !important;
+}
+

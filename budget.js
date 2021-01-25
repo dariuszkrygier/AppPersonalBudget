@@ -24,6 +24,29 @@ if(newMonth < 0){
     yearOfPreviousMonth = date.getFullYear()-1;
 }
 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#toggleChangeName").slideToggle("slow");
+	$("#toggleNameApplyChanges").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#flip2").click(function(){
+    $("#toggleChangeEmail").slideToggle("slow");
+	$("#toggleEmailApplyChanges").slideToggle("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#flip3").click(function(){
+    $("#toggleChangePassword").slideToggle("slow");
+	$("#toggleNewPassword").slideToggle("slow");
+	$("#toggleRepeatPassword").slideToggle("slow");
+	$("#togglePasswordApplyChanges").slideToggle("slow");
+  });
+});
+
 function formatDate(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
