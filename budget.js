@@ -24,6 +24,22 @@ if(newMonth < 0){
     yearOfPreviousMonth = date.getFullYear()-1;
 }
 
+$(document).ready(function() {
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;       
+    $("#theDate").attr("value", today);
+});
+
+
+
 $(document).ready(function(){
   $("#flip").click(function(){
     $("#toggleChangeName").slideToggle("slow");
@@ -60,15 +76,22 @@ function formatDate(date) {
     return [year, month, day].join('-');
 }
 
+
+	function updateHTML(thisMonth, value) {
+  var elem = document.getElementById(thisMonth);
+  if(typeof elem !== 'undefined' && elem !== null) {
+    elem.innerHTML = value;
+  }
+}
                
-   document.getElementById("thisMonth").onclick = function (){thisMonth()};
+    document.getElementById("thisMonth").onclick = function (){thisMonth()};
 	
 	function thisMonth(){
 		document.getElementById("wynik1").innerHTML = formatDate(firstDay);
 		document.getElementById("wynik2").innerHTML = formatDate(lastDay);
     }
 		
-	  document.getElementById("previousMonth").onclick = function (){previousMonth()};
+	document.getElementById("previousMonth").onclick = function (){previousMonth()};
 	
 	function previousMonth(){
 		document.getElementById("wynik1").innerHTML = formatDate(previousMonthFirstDay);
@@ -142,12 +165,9 @@ function formatDate(date) {
         {maxWidth: 600,width:420,height:250,options: {centerx: 150,key:labels, labels: []}}
     ]);
 
-
-		
-	document.querySelector("#today").valueAsDate = new Date();
-
+	
 	 
-        var form = document.querySelector('.needs-validation');
+       /* var form = document.querySelector('.needs-validation');
 
         form.addEventListener('submit', function(event) {
             if (form.checkValidity() === false) {
@@ -157,7 +177,7 @@ function formatDate(date) {
             form.classList.add('was-validated');
         })
 		
-		
+		*/
 
     
 

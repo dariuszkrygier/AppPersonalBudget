@@ -84,11 +84,13 @@ h2
 
 
 
-#wplata, #today 
+#wplata, #todayIncome, #todayExpense, #loginName, #passwordInput, #registerName, #registerPassword, #registerPasswordRepeat, #registerEmail 
 {
    border-top-right-radius:5px;
 	border-bottom-right-radius:5px;
 }
+
+
 
 .incomeCategory
 {
@@ -98,12 +100,18 @@ h2
 	padding:10px;
 	border: 1px solid white;
 	border-radius:5px;
+	margin-top: 40px !important;
 
 }
 
 .form-check
 {
 	padding-left:70px;
+}
+
+.form-check-input
+{
+	margin-top:5px !important;
 }
 
 form label span{
